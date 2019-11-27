@@ -1,6 +1,6 @@
 FROM python:2.7.9
 
-ARG GECOSCC_VERSION=2.5.0 
+ARG GECOSCC_VERSION=development
 ARG GECOSCC_LANG=es_ES.UTF-8
 ARG DISTRIBUTION=jessie
 ARG CHEF_CLIENT_URL=https://packages.chef.io/files/stable/chef/12.22.5/debian/8/chef_12.22.5-1_amd64.deb
@@ -51,7 +51,7 @@ ENV LC_ALL $GECOSCC_LANG
 
 # Install supervisor GECOS CC
 RUN pip install supervisor \
-	&& pip install --upgrade https://github.com/gecos-team/gecoscc-ui/archive/$GECOSCC_VERSION.zip
+	&& pip install --upgrade https://github.com/System25/gecoscc-ui/archive/$GECOSCC_VERSION.zip
 
 # Fixing gevent-socketio error
 RUN sed -i 's/"Access-Control-Max-Age", 3600/"Access-Control-Max-Age", "3600"/'  /usr/local/lib/python2.7/site-packages/socketio/handler.py \

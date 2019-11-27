@@ -43,7 +43,7 @@ CHEF_SERVER_URL=https://$HOSTNAME
 CHEF_SERVER_VERSION="12.18.14" 
 RUNUSER=gecos
 RUNGROUP=gecos
-GCC_URL='https://codeload.github.com/gecos-team/gecoscc-installer/zip/development-docker'
+GCC_URL='https://codeload.github.com/System25/gecoscc-installer/zip/development-docker'
 COOKBOOKSDIR='/opt/gecosccui/.chef/cookbooks'
 
 
